@@ -14,6 +14,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: set Python path
+        run: |
+          export PYTHONPATH=$(pwd)
+          . $PYTHONPATH
       - name: Run pytest
         run: |
           pytest
