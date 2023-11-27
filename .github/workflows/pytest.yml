@@ -16,8 +16,8 @@ jobs:
           pip install -r requirements.txt
       - name: set Python path
         run: |
-          export PYTHONPATH=$(pwd)
-          . $PYTHONPATH
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          source $PYTHONPATH
       - name: Run pytest
         run: |
           pytest
