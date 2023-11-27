@@ -14,10 +14,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pwd
       - name: Run pytest
-        env:
-          PROJECT_HOME: /home/runner/work/pytest-github-actions/pytest-github-actions
-          PYTHONPATH: /home/runner/work/pytest-github-actions/pytest-github-actions
         run: |
           pytest
